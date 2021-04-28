@@ -23,7 +23,6 @@ def play_game():
     print("Generating random value between 0 and 100...")
     time.sleep(5)
     random_num = random.randint(0, 100)
-    print(random_num)
     print("Let's play! You only have 5 guesses!")
 
     for x in range(5):
