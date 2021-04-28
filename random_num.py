@@ -19,16 +19,18 @@ def start_game():
 
 
 def play_game():
+    num_of_guesses = 0
     print("Generating random value between 0 and 100...")
     time.sleep(5)
     random_num = random.randint(0, 100)
+    print(random_num)
     print("Let's play! You only have 5 guesses!")
 
     for x in range(5):
         guess = int(input("Please enter your guess: "))
 
         if int(guess) == random_num:
-            print(f"You guessed the right value, {random_num}\n")
+            print(f"You guessed the right value, {random_num} in {num_of_guesses} turns!\n")
             break
         elif x == 4:
             print("You ran out guesses but you can try again!")
@@ -40,6 +42,8 @@ def play_game():
                 print("Guess again but higher!\n")
             else:
                 print("Guess again but lower!\n")
+
+            num_of_guesses += 1
 
 
 start_game()
